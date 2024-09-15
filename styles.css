@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&display=swap');
+
 body {
-    font-family: Arial, sans-serif;
+    background-image: url(https://wallpapers.com/images/hd/pop-art-background-5wv70yv7lp3kq0sh.jpg);
+    font-family: "M PLUS Rounded 1c", sans-serif;
     margin: 0;
     padding: 0;
     background-color: #fafafa;
@@ -11,6 +14,8 @@ header {
     padding: 20px;
     border-bottom: 1px solid #dbdbdb;
     background-color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
 h1, h3 {
@@ -28,8 +33,99 @@ footer {
     background-color: white;
     padding: 20px;
     border-top: 1px solid #dbdbdb;
+    margin-top: 50px;
     text-align: center;
     color: #8e8e8e;
+}
+
+.main-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.image img {
+    width: 200px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
+    border: 3px solid #0d0f0d;
+}
+
+.content-table {
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.content-table h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.content-table p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #fff;
+}
+
+.explore {
+    text-align: center;
+}
+
+.explore p {
+    display: inline-block;
+    margin: 10px;
+}
+
+.explore .button {
+    background-color: #0b0c0c;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+}
+
+.explore .button:hover {
+    background-color: #0e0f0f;
+}
+
+.gallery-photos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 10px;
+    padding: 20px;
+    justify-items: center;
+    background-color: white;
+}
+
+.gallery-photos div {
+    position: relative;
+}
+
+.gallery-photos img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.zoom-in {
+    transform: scale(1.2);
+}
+
+.gallery-photos img:hover {
+    transform: scale(1.05);
 }
 
 button {
@@ -49,60 +145,86 @@ button:hover {
     background-color: #007ac1;
 }
 
-.gallery-photos {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 10px;
-    padding: 20px;
-    justify-items: center;
-    background-color: white;
-}
-
-.gallery-photos div {
-    position: relative;
-}
-
-.gallery-photos img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    transition: transform 0.2s ease-in-out;
-}
-
-.gallery-photos img:hover {
-    transform: scale(1.05);
-}
-
-ul {
-    list-style: none;
-    padding: 0;
-}
-
-li {
+.hobby, .interest {
     display: flex;
     align-items: center;
+    padding: 20px;
     margin: 20px 0;
+    border-radius: 10px;
 }
 
-li img {
-    border-radius: 50%;
+.hobby img, .interest img {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.hobby:nth-child(odd), .interest:nth-child(odd) {
+    background-color: white;
+    color: black;
+}
+
+.hobby:nth-child(even), .interest:nth-child(even) {
+    background-color: black;
+    color: white;
+}
+
+.hobby img, .interest img {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.hobby p, .interest p {
+    margin-left: 20px;
+}
+
+.hobby:nth-child(1), .interest:nth-child(1) {
+    flex-direction: row;
+}
+
+.hobby:nth-child(2), .hobby:nth-child(3), .interest:nth-child(2) {
+    flex-direction: row-reverse;
+}
+
+.hobby:nth-child(2) p, .hobby:nth-child(3) p, .interest:nth-child(2) p {
     margin-right: 20px;
-    width: 50px;
-    height: 50px;
 }
 
-strong {
-    font-size: 18px;
+h3 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+footer h5 {
+    margin-bottom: 15px;
+}
+
+footer h6 {
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.5;
+    max-width: 600px;
 }
 
 @media (max-width: 768px) {
-    body {
-        font-size: 14px;
+    .hobby, .interest {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .hobby img, .interest img {
+        margin-bottom: 15px;
     }
 
-    button {
-        padding: 6px 12px;
-        font-size: 14px;
+    .hobby p, .interest p {
+        margin: 0;
     }
 
     .gallery-photos img {
